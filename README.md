@@ -1,7 +1,6 @@
-	# CHIC_24_HTML_CSS_JavaScript-study
-24년도 겨울방학 CHIC HTML-CSS-JavaScript 스터디
+# 24년도 겨울방학 CHIC HTML-CSS-JavaScript 스터디
 
-#CHIC STUDY
+## CHIC_24_HTML_CSS_JavaScript-study
 
 (1) 1/8 - OT
 	스터디 진행 방식 회의
