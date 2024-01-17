@@ -1,0 +1,19 @@
+# HTML CH1  
+## HTML 기본 태그  
+
+글자 태그
+- h1 ~ h6 : 제목 글자 생성
+- p, br, hr : 본문 생성
+- a : 하이퍼ㄹ링크 생성
+- b, i, small, sub, sup, ins, del : 글자 모양 지정
+
+(p: paragraph(단락), br: break(줄 바꿈), hr: horizontal rule(수평줄) )
+
+목록 태그
+- ul/ ol, li : 순서가 없는/있는 목록 생성, 목록 요소 생성
+
+테이블 태그
+- table, tr, th, td : 표 생성
+
+미디어 태그
+- img, audio, video : 이미지, 오디오, 비디오 삽입
