@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery</title>
+  <style>
+    div.item:nth-child(1) {background: blueviolet;}
+    div.item:nth-child(2) {background: pink;}
+    div.item:nth-child(3) {background-color: burlywood;}
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script>
+    //첫 번째 ready 이벤트
+    $(document).ready(function () {
+      //변수를 선언
+      var width = $('[data-role="slider"]').attr('data-width');
+      var height = $('[data-role="slider"]').attr('data-height');
+      var count = $('[data-role="slider"] div.item').length;
+
+      //스타일 적용
+      $('[data-role="slider"]').css({
+        position: 'relative',
+        overflow: 'hidden',
+        width: width,
+        height: height
+      }).find('.container').css({
+        position: 'absolution',
+        width: count * width,
+        overflow: 'hidden'
+      }).find('.item').css({
+        width: width,
+        height: height,
+        float: 'left'
+      });
+    });
+    //두 번째 ready 이벤트
+    $(document).ready(function () {
+      //변수를 선언
+      var currentPage = 0;
+      var changePage = function() {
+        $('[data-role="slider"] > .container').animate({
+          left: -currentPage * width
+        }, 500);
+      };
+
+      //이벤트를 연결
+      $('#left-button').click(function () {
+        if (currentPage > 0) {
+          //왼쪽으로 이동
+          currentPage = currentPage - 1;
+          changePage();
+        }
+      });
+      $('#right-button').click(function () {
+        if (currentPage < count - 1) {
+          //오른쪽으로 이동
+          currentPage = currentPage + 1;
+          changePage();
+        }
+      });
+    });
+  </script>
+</head>
+<body>
+  <div data-role="slider" data-width="500" data-height="300">
+    <div class="container">
+      <div class="item">
+        <h1>갤러리 예제</h1>
+        <p>갤러리 예제 내용</p>
+      </div>
+      <div class="item">
+        <h1>갤러리 예제</h1>
+        <p>갤러리 예제 내용</p>
+      </div>
+      <div class="item">
+        <h1>갤러리 예제</h1>
+        <p>갤러리 예제 내용</p>
+      </div>
+    </div>
+  </div>
+  <button id="left-button">←</button>
+  <button id="right-button">→</button>
+</body>
+</html>
