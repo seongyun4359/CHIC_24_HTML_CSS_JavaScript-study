@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KW-CHIC</title>
+    <!--main.css-->
+    <link rel="stylesheet" href="./main.css"/>
+    <!--아이콘-->
+    <script src="https://kit.fontawesome.com/d0ef824827.js" crossorigin="anonymous"></script>
+    <!--제이쿼리-->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- fullcalendar CDN -->
+    <link href='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.css' rel='stylesheet' />
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/main.min.js'></script>
+    <!-- fullcalendar 언어 CDN -->
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@5.8.0/locales-all.min.js'></script>
+</head>
+<body>
+    <div id="top">
+        <div class="homeButtonSearch">
+            <a class="kw_chic" href="https://www.kw.ac.kr/ko/univ/depart_intro.jsp?hpage=college_011_03">
+            <!--광운대학교 로고-->
+            <img src="https://i.namu.wiki/i/rPzFFGIvQPXviMSzd9pZwE2Q1wcKiDBcPTnumALHpDWLodGJcnZr6SX5gIxGFnD4IRMgcNKA7tjQ69s48bwCN5kCcAjgNnztaUxZvCY9OIwEjYp0DPpVboIMdMJ5oSsIgJ2QM2gHZ-PzACt3dPe0Ow.svg" class="kw">
+            </a>
+
+            <a class="kw_chic" href="/main.html">
+              <!--CHIC HOME button-->
+            <div class="chic">K W - C H I C</div>
+            </a>
+            <!--검색 창-->
+            <div class="search-box">
+                <form class="search" action="" method="get">
+                <input class="search-txt" type="text" name="" placeholder="">
+                <button class="search-btn" type="submit">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+        
+          <!--네비게이션 바-->
+          <div class="nav_search">
+            <nav class="nav-container">
+              <ul>
+                <li class="nav-item"><a href="">N o t i c e</a></li>
+                <li class="nav-item"><a href="">P e o p l e</a></li>
+                <li class="nav-item"><a href="">G a l l e r y</a></li>
+                <li class="nav-item"><a href="">P r o j e c t</a></li>
+              </ul>
+            </nav>
+          </div>
+    </div>
+
+    <div id="middle">
+      <div id="left">
+        <aside>
+          <!--사이드 바-->
+          <div class="side-bar">
+            <div class="bookmark"><i class="fa-solid fa-bookmark"></i></div>
+            <ul>
+              <li class="side-bar-item"><a href="#about">A b o u t</a></li><br>
+              <li class="side-bar-item"><a href="#calendar">C a l e n d a r</a></li><br>
+              <li class="side-bar-item"><a href="#chic-activity">A c t i v i t y</a></li><br>
+              <li class="side-bar-item"><a href="#SNS">S N S</a></li>
+            </ul>
+          </div>
+        </aside>
+      </div>
+
+      <div id="right">
+          <!--CHIC image-->
+          <div class="chic-image">
+              <img src="https://avatars.githubusercontent.com/u/121884888?s=200&v=4" width="300" alt="CHIC">
+          </div>
+          <!--About CHIC-->
+          <div class="about-calendar-box">
+              <div class="about-chic">
+              <div class="head-text" id="about">About CHIC</div>
+              <div class="about-box">
+                  <p>
+                  컴퓨터와 인간의 모든 접점에서,<br><br>
+                  기획, 설계, 개발을 수행하면서 전공의 실전적 지식을 함양하고,<br><br>
+                  나아가 인류에게 도움이 되는 소프트웨어를 만드는<br><br>
+                  컴퓨터인간상호작용커뮤니티(Computer Human Interaction Community)입니다.<br><br>
+                  </p>
+              </div>
+          </div>
+
+          <section>
+            <!--information-->
+            <div class="one">
+              <div class="half">
+                <div class="quarter">
+                  <p class="a">Since</p><br>
+                  <p class="b">2021</p>
+                </div>
+                <div class="quarter">
+                  <p class="a">활동인원</p><br>
+                  <p class="b">25+</p>
+                </div>
+              </div>
+              <div class="half">
+                <div class="quarter">
+                  <p class="a">Project</p><br>
+                  <p class="b">0+</p>
+                </div>
+                <div class="quarter">
+                  <p class="a">누적 활동 인원</p><br>
+                  <p class="b">25+</p>
+                </div>
+              </div>
+                
+            </div>
+          </section>
+
+          <!--CHIC 일정표-->
+              <div class="head-text">Calendar</div>
+              <!-- calendar 태그 -->
+              <div id='calendar-container'>
+                <div id='calendar'></div>
+              </div>
+
+              <!--모달 창-->
+              <div class="modal-fade" id="eventModal" tabindex="-1" role="dialog" aria-labelledby="eventModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <p class="event-details" id="eventModalLabel">Event Details</p>
+                      <button type="button" class="close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body" id="eventDetails">
+                      <!-- 이벤트의 상세 정보를 여기에 표시 -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            <section>
+              <!--chic 활동-->
+              <div>
+                <span class="activity-head-text" id="chic-activity">CHIC Activity</span>
+                <div id="slideShow">
+                  <ul class="slides">
+                    <li>
+                      <div class="slides-div">
+                        <span class="activity-title"><b>📚스터디📚</b></span><br><br><br>
+                        <span>공통의 기술 관심사에 대해 그룹으로 모여서 공부합니다.</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="slides-div"> 
+                        <span class="activity-title"><b>🔍CHICathon🔍</b></span><br><br><br>
+                        <span>짧은 기간 동안에 몰입하여 아이디어를 내고 프로토타입을 개발합니다.</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="slides-div">
+                        <span class="activity-title"><b>💻프로젝트💻</b></span><br><br><br>
+                        <span>아이디어톤의 기획을 수개월에 걸쳐 개발하고 실제 서비스화 합니다.</span>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="slides-div">
+                        <span class="activity-title"><b>👨‍💻세미나👨‍💻</b></span><br><br><br>
+                        <span>현업 개발자, 지도교수님, HCC연구실의 세미나를 통해 새로운 기술을 경험하고 트렌드를 파악합니다.</span>
+                      </div>
+                    </li>
+                  </ul> 
+                  <p class="controller">
+                    <!-- &lang: 왼쪽 방향 화살표
+                    &rang: 오른쪽 방향 화살표 -->
+                    <span class="prev">&lang;</span>  
+                    <span class="next">&rang;</span>
+                  </p>
+                </div>
+              </div>
+            </section>
+
+            <section>
+              <!--Activity-History-->
+              <div class="Activity-History">
+                <div class="head-text" id="SNS">SNS</div>
+                <div class="activity-history">
+                  <a href="https://www.notion.so/CHIC-2024-HTML-b3ac45a96e12499c917a4596a85c1691">
+                      <img src="https://www.svgrepo.com/show/315258/notion.svg" alt="Notion" width="150">
+                  </a>
+                  <a href="https://github.com/kw-chi-community">
+                      <img src="https://cdn.icon-icons.com/icons2/3398/PNG/512/github_logo_icon_214756.png" alt="Github" width="150">
+                  </a>
+                  <a href=""> 
+                      <img src="https://i.namu.wiki/i/1Hiv-mf3x_xkYU1kd6PRSAA9TZycl-A3h-HM--kersQF5fL6_fF2PmO8757fj9CqhXnmcy2lFaQkwToWTxtIHw.webp" alt="Discord" width="150"> 
+                  </a>
+                  <a href=""> 
+                      <img src="https://i.namu.wiki/i/DlENEaPlUpTU7_ab04rRGqS4bhvWDb5wFt5-Ip1KYyk4AYJ3qiRqOa3Tv4Vp4x7ti4zk3A5z3KZ0yKUjgAyZXw.svg" alt="Instagram" width="150">
+                  </a>
+                </div>
+                <div class="Activity-History-div">
+                  <span class="Activity-History-span"><a href="https://www.notion.so/CHIC-2024-HTML-b3ac45a96e12499c917a4596a85c1691">Notion</a></span>
+                  <span class="Activity-History-span"><a href="https://github.com/kw-chi-community">Github</a></span>
+                  <span class="Activity-History-span"><a href="">Discode</a></span>
+                  <span class="Activity-History-span"><a href="">Instagram</a></span>
+                </div>
+              </div>
+            </section>
+          </div>
+      </div>
+    </div>
+  <script src="main.js"></script>
+</body>
+</html>

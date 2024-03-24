@@ -1,0 +1,579 @@
+/*폰트*/
+@font-face {
+  font-family: 'NanumSquareNeo-Variable';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_11-01@1.0/NanumSquareNeo-Variable.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+}
+
+body {
+  width: 1920px;
+  margin: 0 auto;
+}
+
+#middle {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+#left {
+  position: relative;
+  float: left;
+  width: 200px;
+  z-index: 3;
+}
+
+#right {
+  float: left;
+  width: 1720px;
+  position: relative;
+  right: 140px;
+  z-index: 2;
+}
+
+#top {width: 1920px;}
+#bottom {width: 1920px;}
+
+
+/*광운대학교 로고 and CHIC home*/
+.kw {
+  width: 135px;
+  margin-right: 10px;
+  margin-top:10px;
+  margin-left: 10px;
+}
+
+.chic {
+  position: relative;
+  width: 400px;
+  color: #919191;
+  font-size: 25px;
+  font-family: 'NanumSquareNeo-Variable';
+  margin-left: 8px;
+  top: 4px;
+  margin-top:10px;
+}
+
+.kw_chic {
+  display: flex;
+  text-decoration: none;
+}
+
+.homeButtonSearch {
+  display: flex;
+  margin-bottom: 15px;
+  margin-top:10px;
+}
+
+/*검색 창*/
+.search-box {
+  position: absolute;
+  right: 0;
+  margin-top:10px;
+  opacity: 0.6;
+}
+
+.search {
+  height: 10px;
+  width: 150px;
+  background: #DBDBDB;
+  border-radius: 20px;
+  padding: 10px;
+  border: 1px solid #DBDBDB;
+}
+
+.search-txt {
+  background: #DBDBDB;
+  border: none;
+  outline: none;
+  float: left;
+  padding: 0px;
+  color: black;
+  font-size: 16px;
+  line-height: 20px;
+  width: 100px;
+  height: 16px;
+}
+
+.search-btn {
+  color: black;
+  float: right;
+  width: 20px;
+  height: 100%;
+  border-radius: 0%;
+  background: #DBDBDB;
+  border: none;
+  font-size: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*네비게이션 바*/
+.body {
+  margin: 0;
+}
+
+.nav_search {
+  margin-bottom: 50px;
+}
+
+.nav-container ul{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: white;
+  list-style-type: none;
+  border-top: 2px solid #c2c2c2;
+  border-bottom: 2px solid #c2c2c2;
+  height: 40px;
+}
+
+.nav-item {
+  padding: 15px;
+  cursor: pointer;
+  font-family: 'NanumSquareNeo-Variable';
+  margin-right: 30px;
+  font-size: 20px;
+}
+
+.nav-item :nth-child(1) {
+  position: relative;
+  left: 20px;
+}
+
+.nav-item a {
+  text-align: center;
+  text-decoration: none;
+  color: #919191;
+  position: relative;
+  top: -7px;
+}
+
+/*about, 캘린더 가운데 정렬*/
+.about-calendar-box {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px;
+  position: relative;
+  top: -50px;
+}
+
+/*about box*/
+.about-chic {
+  margin-bottom: 30px;
+}
+
+.about-box {
+  border: 1px solid #919191;
+  border-radius: 20px;
+  margin: 0 auto;
+  max-width: 600px;
+  color: #919191;
+  box-shadow : 5px 5px #c2c2c2;
+  margin-bottom: 100px;
+  font-family: 'NanumSquareNeo-Variable';
+  padding-top: 15px;
+}
+
+/*about, calendar, SNS에 적용*/
+.head-text {
+  font-size: 25px;
+  color: #919191;
+  text-align: left;
+  margin-bottom: 10px;
+  font-family: 'NanumSquareNeo-Variable';
+}
+
+/*사이드 바*/
+.side-bar {
+  margin-top: 90px;
+  border: 1px solid #919191;
+  border-radius: 20px;
+  margin-left: 10px; 
+  position: fixed;
+  box-shadow : 5px 5px #c2c2c2;
+}
+
+.side-bar ul {
+  list-style-type: none;
+  text-align: center;
+  margin-right: 38px;
+  margin-top: 30px;
+  margin-bottom: 50px;
+  font-family: 'NanumSquareNeo-Variable';
+}
+
+.side-bar-item a {
+  text-decoration: none;
+  color: #919191;
+  cursor: pointer;
+  font-size: 17px
+}
+
+.bookmark i {
+  font-size: 40px;
+  color: #c2c2c2;
+  position: relative;
+  right: -90px;
+}
+
+.side-bar-item {
+  margin-bottom: 15px;
+}
+
+/*image-sidebar 가로 정렬*/
+.image-sidebar {
+  display: flex;
+}
+/*CHIC image*/
+.chic-image {
+  text-align: center;
+  margin: 0 auto;
+  max-width: 600px;
+  margin-bottom: 60px;
+  /*margin-left 속성 필요하면 적용할 것*/
+}
+
+
+/*사각형 4개*/
+.one {
+  text-align: center;
+  margin: 0 auto;
+  width: 600px;
+  margin-bottom: 300px;
+}
+
+.half {
+  display: flex;
+  text-align: center;
+  padding: 5px;
+}
+
+.quarter {
+  border: 1px solid #919191;
+  width: 280px;
+  height: 130px;
+  border-radius: 20px;
+  margin-left: 5px; 
+  margin-right: 5px;     
+  box-shadow : 5px 5px #c2c2c2;       
+}
+
+.a {
+  font-size: 13px;
+  height: 13px;
+  position: relative;
+  bottom: -25px;
+  color: #919191;
+}
+
+.b {
+  font-size: 26px;
+  position: relative;
+  top: -25px;
+  color: #919191;
+  font-family: 'NanumSquareNeo-Variable';
+}
+
+/*chic-activity 슬라이드쇼*/
+.activity-head-text {
+  font-size: 25px;
+  color: #919191;
+  position: relative;
+  top: 35px;
+  left: -170px;
+  font-family: 'NanumSquareNeo-Variable';
+}
+
+li{
+list-style-type: none;
+}
+
+#slideShow{
+width: 600px;
+height: 400px;
+position: relative;
+margin: 50px auto;
+overflow: hidden;   
+color: #919191;
+border: 1px solid #919191;
+border-radius: 40px;
+box-shadow : 5px 5px #c2c2c2;
+}
+
+.slides{
+position: absolute;
+left: 0;
+top: 120px;
+width: 2500px; /* 슬라이드할 사진과 마진 총 넓이 */
+transition: left 0.5s ease-out; 
+/*ease-out: 처음에는 느렸다가 점점 빨라짐*/
+}
+
+.slides-div {
+  width:450px;
+  font-family: 'NanumSquareNeo-Variable';
+}
+
+.slides-div:nth-child(1) {
+  position: relative;
+  left: 30px;
+}
+
+/* 슬라이드들 옆으로 정렬 */
+.slides li:not(:last-child){
+float: left;
+margin-right: 103px;
+}
+
+.slides li{
+float: left;
+}
+
+.activity-title {
+  font-size: 23px;
+}
+
+.controller span{
+position:absolute;
+background-color: transparent;
+color: black;
+text-align: center;
+border-radius: 50%;
+padding: 10px 20px;
+top: 50%;
+font-size: 1.3em;
+cursor: pointer;
+}
+
+/* 이전, 다음 화살표에 마우스 커서가 올라가 있을때 */
+.controller span:hover{
+background-color: rgba(128, 128, 128, 0.11);
+}
+
+.prev{
+left: 10px;
+}
+
+/* 이전 화살표에 마우스 커서가 올라가 있을때 
+이전 화살표가 살짝 왼쪽으로 이동하는 효과*/
+.prev:hover{
+transform: translateX(-10px);
+}
+
+.next{
+right: 10px;
+}
+
+/* 다음 화살표에 마우스 커서가 올라가 있을때 
+이전 화살표가 살짝 오른쪽으로 이동하는 효과*/
+.next:hover{
+transform: translateX(10px);
+}
+
+/*activity-history*/
+.activity-span {
+  font-size: 25px;
+  position: relative;
+  left: -200px;
+  color: #919191;
+}
+
+.Activity-History {
+  text-align: center;
+  margin-top: 300px;
+  margin-bottom: 300px;
+}
+
+.activity-history a {
+  text-decoration: none;
+}
+
+a span {
+  color:#919191;
+  position: relative;
+  top: 100px;
+}
+
+.activity-history a:nth-child(4) img {
+  width: 130px;
+  height: auto;
+  position: relative;
+  top: -7px;
+  left: 7px;
+}
+
+.Activity-History-div {
+  display: flex;
+  justify-content: space-between;
+}
+
+.Activity-History-span {
+  margin: 0 50px;
+}
+
+.Activity-History-span a{
+  position: relative;
+  top: -7px;
+  color: #919191;
+  float: left;
+  text-decoration: none;
+  font-family: 'NanumSquareNeo-Variable';
+}
+
+.Activity-History-span:nth-child(1) {
+  position: relative;
+}
+
+.Activity-History-span:nth-child(2) {
+  position: relative;
+  left: 1px;
+}
+
+.Activity-History-span:nth-child(3) {
+  position: relative;
+  left: -3px;
+}
+
+.Activity-History-span:nth-child(4) {
+  position: relative;
+  left: -23px;
+}
+
+/*캘린더*/
+.wrap, .calender-wrap {
+  margin-top: 40px;
+  font-size: 14px;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+}
+
+.calender-container {
+  overflow: hidden;
+  font-family: Arial, Helvetica Neue, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+/* 캘린더 위의 해더 스타일(날짜가 있는 부분) */
+.fc-header-toolbar {
+  padding-top: 1em;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+
+/*버튼 색상, 투명도 수정*/
+.fc-direction-ltr .fc-button-group>.fc-button:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #919191;
+  border: none;
+  opacity: 0.5;
+  font-family: 'NanumSquareNeo-Variable';
+  
+}
+
+.fc-direction-ltr .fc-button-group>.fc-button:not(:first-child) {
+  margin-left: -1px;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+  background-color: #919191;
+  border: none;
+  opacity: 0.5;
+  font-family: 'NanumSquareNeo-Variable';
+}
+
+/*오늘 버튼 안 쓰니까 숨기기*/
+.fc-direction-ltr .fc-toolbar>*>:not(:first-child) {
+  margin-left: 0.75em;
+  display: none;
+}
+
+/*캘린더 네비게이션 바 위치 수정*/
+.fc .fc-toolbar.fc-header-toolbar {
+  margin-bottom: 1.5em;
+  position: relative;
+  left: 10px;
+}
+
+/*캘린더 헤더 폰트 수정*/
+.fc .fc-toolbar-title {
+  font-size: 1.75em;
+  margin: 0;
+  color: #b5b5b5;
+  font-weight: 300;
+  font-family: 'NanumSquareNeo-Variable';
+}
+
+/*화살표 버튼 색상 수정*/
+.fc-direction-ltr .fc-button-group>.fc-button:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  background-color: #919191;
+  border: none;
+  opacity: 0.5;
+  font-family: 'NanumSquareNeo-Variable';
+}
+
+/*이벤트 상자 배경색 수정*/
+.fc-daygrid-block-event .fc-event-time, .fc-daygrid-block-event .fc-event-title {
+  padding: 1px;
+  background-color: #797979;
+  border: none;
+  cursor: pointer;
+}
+/*캘린더 내 날짜 표시 폰트 변경*/
+.fc-scrollgrid-sync-inner {
+  font-family: 'NanumSquareNeo-Variable';
+  color: #5d5d5d;
+}
+
+/*모달 창*/
+.modal-fade {
+  border: 2px solid #919191;
+  border-radius: 40px;
+  box-shadow: 5px 5px #c2c2c2;
+  margin-top: 20px;
+  margin-bottom: 300px;
+}
+
+.modal-body {
+  color:#919191;
+  font-size: 20px;
+  font-family: 'NanumSquareNeo-Variable';
+}
+
+.event-details {
+  font-size: 25px;
+  color: #919191;
+  margin-left: 20px;
+  position: relative;
+  top: -10px;
+  font-family: 'NanumSquareNeo-Variable';
+}
+
+.modal-header {
+  position: relative;
+  display: flex;
+}
+
+.close {
+  width: 40px;
+  height: 40px;
+  border: none;
+  position: relative;
+  left: 360px;
+  top: 10px;
+  background-color: #f3f3f3;
+  border-radius: 40px;
+  box-shadow: 2px 2px #c2c2c2;
+  cursor: pointer;
+}
+
+.modal-body {
+  position: relative;
+  top: -10px;
+  padding: 15px;
+}
